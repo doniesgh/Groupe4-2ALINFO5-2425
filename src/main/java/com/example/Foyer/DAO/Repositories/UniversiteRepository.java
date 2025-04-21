@@ -11,5 +11,4 @@ public interface UniversiteRepository extends JpaRepository<Universite, Long> {
     List<Universite> findByFoyerBlocsChambresReservationsEtudiantsNomEtLikeAndFoyerBlocsChambresReservationsEtudiantsDateNaissanceBetween(String nom, LocalDate date1, LocalDate date2);
     List<Universite> findByFoyerCapaciteFoyerLessThan(long u);
 
-
 }
