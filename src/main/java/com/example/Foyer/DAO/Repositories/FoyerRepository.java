@@ -1,8 +1,9 @@
-package com.example.Foyer.DAO.Repositories;
+package tn.esprit.spring.DAO.Repositories;
 
-import com.example.Foyer.DAO.Entities.Foyer;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import tn.esprit.spring.DAO.Entities.Foyer;
+import tn.esprit.spring.DAO.Entities.TypeChambre;
 
 import java.util.List;
 
@@ -21,6 +22,8 @@ public interface FoyerRepository extends JpaRepository<Foyer,Long> {
 
     // Afficher la liste des foyers qui comportent des chambres de meme type
     // que le type passé en paramétre
+    // Foyer -- Bloc -- Chambre
+    List<Foyer> getByBlocsChambresTypeC(TypeChambre typeChambre);
 
     @Query("select f from Foyer f Join Bloc b On b.foyer.idFoyer" +
             "=f.idFoyer where b.nomBloc=?1")
