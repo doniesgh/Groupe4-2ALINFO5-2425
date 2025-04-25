@@ -4,12 +4,14 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 
 import com.example.Foyer.DAO.Entities.Etudiant;
 
 import java.time.LocalDate;
 import java.util.List;
 
+@Repository
 public interface EtudiantRepository extends JpaRepository<Etudiant, Long> {
 
     // Afficher la liste des étudiants avec le nom passé en paramétre
