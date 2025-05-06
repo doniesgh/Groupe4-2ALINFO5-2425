@@ -4,6 +4,7 @@ import com.example.Foyer.DAO.Entities.Foyer;
 import com.example.Foyer.DAO.Entities.Universite;
 import com.example.Foyer.Services.Foyer.IFoyerService;
 import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -11,6 +12,7 @@ import java.util.List;
 @RestController
 @RequestMapping("foyer")
 @AllArgsConstructor
+@Service
 public class FoyerRestController {
     IFoyerService service;
 

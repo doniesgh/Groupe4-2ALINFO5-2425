@@ -3,17 +3,14 @@ package com.example.Foyer.Services.Foyer;
 import com.example.Foyer.DAO.Entities.Foyer;
 import com.example.Foyer.DAO.Repositories.FoyerRepository;
 import com.example.Foyer.DAO.Repositories.UniversiteRepository;
-import com.example.Foyer.Services.Universite.IUniversiteService;
-import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class FoyerService  implements IFoyerService {
 
     FoyerRepository repo;
     UniversiteRepository universiteRepository;
-    //BlocRepository blocRepository;
 
     @Override
    public Foyer addOrUpdate(Foyer f) {
@@ -25,9 +22,9 @@ public class FoyerService  implements IFoyerService {
         return repo.findAll();
    }
 
-  @Override
+    @Override
     public Foyer findById(long id) {
-        return repo.findById(id).get();
+        return repo.findById(id).orElse(null);
     }
 
     @Override

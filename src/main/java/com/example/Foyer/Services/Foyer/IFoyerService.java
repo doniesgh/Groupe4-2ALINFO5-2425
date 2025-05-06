@@ -1,8 +1,5 @@
 package com.example.Foyer.Services.Foyer;
-
 import com.example.Foyer.DAO.Entities.Foyer;
-import com.example.Foyer.DAO.Entities.Universite;
-
 import java.util.List;
 
 public interface IFoyerService {

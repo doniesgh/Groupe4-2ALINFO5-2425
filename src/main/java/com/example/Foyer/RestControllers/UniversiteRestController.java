@@ -38,10 +38,10 @@ public class UniversiteRestController {
         service.deleteById(id);
     }
 
-    @PostMapping("ajouterUniversiteEtSonFoyer")
-    Universite ajouterUniversiteEtSonFoyer(@RequestBody Universite u)
-    {
-        return service.ajouterUniversiteEtSonFoyer(u);
-    }
+//    @PostMapping("ajouterUniversiteEtSonFoyer")
+//    Universite ajouterUniversiteEtSonFoyer(@RequestBody Universite u)
+//    {
+//        return service.ajouterUniversiteEtSonFoyer(u);
+//    }
 
 }
