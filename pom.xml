@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>Foyer</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>Foyer</name>
 	<description>Foyer Project created by 2alinfo5 group 4</description>
 	<url/>
