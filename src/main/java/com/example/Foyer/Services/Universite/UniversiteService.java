@@ -2,9 +2,10 @@ package com.example.Foyer.Services.Universite;
 
 import com.example.Foyer.DAO.Entities.Universite;
 import com.example.Foyer.DAO.Repositories.UniversiteRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class UniversiteService  implements IUniversiteService{
     UniversiteRepository repo;
 
@@ -33,8 +34,8 @@ public class UniversiteService  implements IUniversiteService{
         repo.delete(u);
     }
 
-    @Override
-    public Universite ajouterUniversiteEtSonFoyer(Universite u) {
-        return repo.save(u);
-    }
+//    @Override
+//    public Universite ajouterUniversiteEtSonFoyer(Universite u) {
+//        return repo.save(u);
+//    }
 }
