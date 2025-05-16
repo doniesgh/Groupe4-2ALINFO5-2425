@@ -13,14 +13,14 @@ public class FoyerService  implements IFoyerService {
     UniversiteRepository universiteRepository;
 
     @Override
-   public Foyer addOrUpdate(Foyer f) {
-       return repo.save(f);
+    public Foyer addOrUpdate(Foyer f) {
+        return repo.save(f);
     }
 
-   @Override
+    @Override
     public List<Foyer> findAll() {
         return repo.findAll();
-   }
+    }
 
     @Override
     public Foyer findById(long id) {
@@ -31,6 +31,7 @@ public class FoyerService  implements IFoyerService {
     public void deleteById(long id) {
         repo.deleteById(id);
     }
+
     @Override
     public void delete(Foyer f) {
         repo.delete(f);
@@ -66,15 +67,15 @@ public class FoyerService  implements IFoyerService {
 
 //    @Override
 //    public Foyer ajoutFoyerEtBlocs(Foyer foyer) {
-        //Foyer child / Bloc parent
-        //Objet foyer = attribut objet foyer + les blocs associés
+    //Foyer child / Bloc parent
+    //Objet foyer = attribut objet foyer + les blocs associés
 //        Foyer f = repo.save(foyer);
 //        for (Bloc b : foyer.getBlocs()) {
 //            b.setFoyer(f);
 //            blocRepository.save(b);
 //        }
 //        return f;
-        //-----------------------------------------
+    //-----------------------------------------
 //        List<Bloc> blocs = foyer.getBlocs();
 //        foyer = repo.save(foyer);
 //        for (Bloc b : blocs) {
@@ -84,7 +85,7 @@ public class FoyerService  implements IFoyerService {
 //        return foyer;
 //    }
 
-//    @Override
+    //    @Override
 //    public Universite affecterFoyerAUniversite(long idF, long idU) {
 //        Universite u= universiteRepository.findById(idU).get();
 //        Foyer f= foyerRepository.findById(idF).get();
