@@ -74,12 +74,5 @@ class UniversiteServiceTest {
         verify(repo, times(1)).delete(u);
     }
 
-//    @Test
-//    void ajouterUniversiteEtSonFoyer_ShouldSaveAndReturnUniversite() {
-//        Universite u = new Universite();
-//        when(repo.save(u)).thenReturn(u);
-//        Universite result = universiteService.ajouterUniversiteEtSonFoyer(u);
-//        assertEquals(u, result);
-//        verify(repo, times(1)).save(u);
-//    }
+
 }
