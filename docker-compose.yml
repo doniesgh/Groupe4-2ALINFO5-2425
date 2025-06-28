@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  spring-app:
+    build: .
+    image: foyer-app:latest
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    networks:
+      - foyer-network
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/foyerdb
+      SPRING_DATASOURCE_USERNAME: user
+      SPRING_DATASOURCE_PASSWORD: password
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_DATABASE: foyerdb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - foyer-network
+
+# Réseaux Docker personnalisés
+networks:
+  foyer-network:
+    driver: bridge
+
+# Volumes pour persistance
+volumes:
+  mysql-data:
