@@ -32,11 +32,6 @@ public class UniversiteService  implements IUniversiteService{
         }
     }
 
-//
-//    @Override
-//    public Universite findById(long id) {
-//        return repo.findById(id).get();
-//    }
 
     @Override
     public void deleteById(long id) {
@@ -48,8 +43,4 @@ public class UniversiteService  implements IUniversiteService{
         repo.delete(u);
     }
 
-//    @Override
-//    public Universite ajouterUniversiteEtSonFoyer(Universite u) {
-//        return repo.save(u);
-//    }
 }
