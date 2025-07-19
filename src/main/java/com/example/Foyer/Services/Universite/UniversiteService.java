@@ -5,6 +5,8 @@ import com.example.Foyer.DAO.Repositories.UniversiteRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
+
 @Service
 public class UniversiteService  implements IUniversiteService{
     UniversiteRepository repo;
@@ -19,10 +21,22 @@ public class UniversiteService  implements IUniversiteService{
         return repo.findAll();
     }
 
+
     @Override
     public Universite findById(long id) {
-        return repo.findById(id).get();
+        Optional<Universite> optionalUniversite = repo.findById(id);
+        if (optionalUniversite.isPresent()) {
+            return optionalUniversite.get();
+        } else {
+            throw new RuntimeException("Université introuvable avec l'id : " + id);
+        }
     }
+
+//
+//    @Override
+//    public Universite findById(long id) {
+//        return repo.findById(id).get();
+//    }
 
     @Override
     public void deleteById(long id) {
