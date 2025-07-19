@@ -8,6 +8,5 @@ import java.util.List;
 
 public interface UniversiteRepository extends JpaRepository<Universite, Long> {
     Universite findByNomUniversite(String nomUniversite);
-//    List<Universite> findByFoyerBlocsChambresReservationsEtudiantsNomEtLikeAndFoyerBlocsChambresReservationsEtudiantsDateNaissanceBetween(String nom, LocalDate date1, LocalDate date2);
 
 }
