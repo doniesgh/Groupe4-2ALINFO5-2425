@@ -30,7 +30,7 @@
 	</scm>
 	<properties>
 		<java.version>17</java.version>
-		<buildNumber>0</buildNumber>
+<!--		<buildNumber>0</buildNumber>-->
 
 	</properties>
 	<dependencies>
@@ -82,7 +82,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>Foyer-${buildNumber}</finalName>
+<!--		<finalName>Foyer-${buildNumber}</finalName>-->
 		<plugins>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
